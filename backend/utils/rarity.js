@@ -20,51 +20,55 @@ layerConfigurations.forEach((config) => {
   let layers = config.layersOrder;
 
   layers.forEach((layer) => {
-    // get elements for each layer
-    let elementsForLayer = [];
-    let elements = getElements(`${layersDir}/${layer.name}/`);
-    elements.forEach((element) => {
-      // just get name and weight for each element
-      let rarityDataElement = {
-        trait: element.name,
-        chance: element.weight.toFixed(0),
-        occurrence: 0, // initialize at 0
-      };
-      elementsForLayer.push(rarityDataElement);
-    });
+
     let layerName =
-      layer.displayName != undefined
-        ? layer.displayName
-        : layer.name;
-    // don't include duplicate layers
-    if (!rarityData.includes(layer.name)) {
-      if(layer.name!=''){
-        console.log(
-          layer.name
-        )
-        // add elements for each layer to chart
-        rarityData[layerName] = elementsForLayer;
-      } 
-    }
+    layer.displayName != undefined
+      ? layer.displayName
+      : layer.name;
+
+    if(layerName !='') {
+      console.log(layerName);
+
+        // get elements for each layer
+      let elementsForLayer = [];
+      let elements = getElements(`${layersDir}/${layer.name}/`);
+      elements.forEach((element) => {
+        // just get name and weight for each element
+        let rarityDataElement = {
+          trait: element.name,
+          chance: element.weight.toFixed(0),
+          occurrence: 0, // initialize at 0
+        };
+
+
+        elementsForLayer.push(rarityDataElement);
+
+      });
+
+      // don't include duplicate layers
+      if (!rarityData.includes(layer.name)) { 
+          // add elements for each layer to chart
+          rarityData[layerName] = elementsForLayer; 
+      }
+    } 
   });
 });
 
 // fill up rarity chart with occurrences from metadata
 data.forEach((element) => {
-  let attributes = element.attributes;
-
-  
+  let attributes = element.attributes; 
   attributes.forEach((attribute) => {
     let traitType = attribute.trait_type;
-    let value = attribute.value;
-
-    let rarityDataTraits = rarityData[traitType];
-    rarityDataTraits.forEach((rarityDataTrait) => {
-      if (rarityDataTrait.trait == value) {
-        // keep track of occurrences
-        rarityDataTrait.occurrence++;
-      }
-    });
+    let value = attribute.value; 
+    let rarityDataTraits = rarityData[traitType]; 
+    if(rarityDataTraits){
+      rarityDataTraits.forEach((rarityDataTrait) => {
+        if (rarityDataTrait.trait == value) {
+          // keep track of occurrences
+          rarityDataTrait.occurrence++;
+        }
+      });
+    } 
   });
 });
 
