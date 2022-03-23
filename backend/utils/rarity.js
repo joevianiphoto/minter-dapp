@@ -13,6 +13,8 @@ let editionSize = data.length;
 
 let rarityData = [];
 
+
+
 // intialize layers to chart
 layerConfigurations.forEach((config) => {
   let layers = config.layersOrder;
@@ -31,13 +33,18 @@ layerConfigurations.forEach((config) => {
       elementsForLayer.push(rarityDataElement);
     });
     let layerName =
-      layer.options?.["displayName"] != undefined
-        ? layer.options?.["displayName"]
+      layer.displayName != undefined
+        ? layer.displayName
         : layer.name;
     // don't include duplicate layers
     if (!rarityData.includes(layer.name)) {
-      // add elements for each layer to chart
-      rarityData[layerName] = elementsForLayer;
+      if(layer.name!=''){
+        console.log(
+          layer.name
+        )
+        // add elements for each layer to chart
+        rarityData[layerName] = elementsForLayer;
+      } 
     }
   });
 });
@@ -45,6 +52,8 @@ layerConfigurations.forEach((config) => {
 // fill up rarity chart with occurrences from metadata
 data.forEach((element) => {
   let attributes = element.attributes;
+
+  
   attributes.forEach((attribute) => {
     let traitType = attribute.trait_type;
     let value = attribute.value;
