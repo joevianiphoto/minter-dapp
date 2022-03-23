@@ -12,21 +12,87 @@ const description = "Pit Puppy Pals, is a collection of 7000 computer generated,
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
+// If you have selected Solana then the collection starts from 0 automatically
+// If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 3400,    ///Floppy ears randon (3400)
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Mat" , displayName : "Floor Mat"},  
+      { name: "Body" , displayName : "Body Color" },
+      { name: "Accent Fur" },
+      { name: "Highlights"  , displayName : ""}, 
+      { name: "Border", displayName : "Ears"}, 
+      { name: "Eyes" }, 
+      { name: "Nose" , displayName : ""}, 
+      { name: "Shadows"  , displayName : ""},   
+      { name: "Neck Decoration" },     
+      { name: "Mouth" }, 
+      { name: "Toys"  , displayName : "Toy Right"},  
+      { name: "Toys2"  , displayName : "Toy Left"}  ,
+      { name: "Frame"  , displayName : ""}    
     ],
-  },
+  } ,
+  {
+    growEditionSizeTo: 6800,    ///Pointed ears randon (3000) 6800
+    layersOrder: [
+      { name: "Background" },
+      { name: "Mat" , displayName : "Floor Mat"},  
+      { name: "BodyPointEars" , displayName : "Body Color" },
+      { name: "Accent Fur" },
+      { name: "Highlights"  , displayName : ""}, 
+      { name: "BorderPointEars", displayName : "Ears"}, 
+      { name: "Eyes" }, 
+      { name: "Nose" , displayName : ""}, 
+      { name: "Shadows"  , displayName : ""},   
+      { name: "Neck Decoration" },     
+      { name: "Mouth" }, 
+      { name: "Toys"  , displayName : "Toy Right"},  
+      { name: "Toys2"  , displayName : "Toy Left"}  ,
+      { name: "Frame"  , displayName : ""}     
+    ], 
+  },    
+  {
+    growEditionSizeTo: 6900,    ///Floppy brindle ears randon (100) 6900
+    layersOrder: [ 
+      { name: "Background" },
+      { name: "Mat" , displayName : "Floor Mat"},  
+      { name: "BodyBrindle" , displayName : "Body Color" },
+      { name: "Accent Fur" },
+      { name: "Highlights"  , displayName : ""}, 
+      { name: "Border", displayName : "Ears"}, 
+      { name: "Eyes" }, 
+      { name: "Nose" , displayName : ""}, 
+      { name: "Shadows"  , displayName : ""},   
+      { name: "Neck Decoration" },     
+      { name: "Mouth" }, 
+      { name: "Toys"  , displayName : "Toy Right"},  
+      { name: "Toys2"  , displayName : "Toy Left"} ,
+      { name: "Frame"  , displayName : ""}      
+    ], 
+  }, 
+  {
+    growEditionSizeTo:  7000,    ///Pointed brindle randon (100) 7000
+    layersOrder: [
+      { name: "Background" },
+      { name: "Mat" , displayName : "Floor Mat"},  
+      { name: "BodyBrindlePoint" , displayName : "Body Color" },
+      { name: "Accent Fur" },
+      { name: "Highlights"  , displayName : ""}, 
+      { name: "BorderPointEars", displayName : "Ears"}, 
+      { name: "Eyes" }, 
+      { name: "Nose" , displayName : ""}, 
+      { name: "Shadows"  , displayName : ""},   
+      { name: "Neck Decoration" },     
+      { name: "Mouth" }, 
+      { name: "Toys"  , displayName : "Toy Right"},  
+      { name: "Toys2"  , displayName : "Toy Left"}  ,
+      { name: "Frame"  , displayName : ""}    
+    ], 
+  } 
 ];
-
+ 
 const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
@@ -34,7 +100,7 @@ const debugLogs = false;
 const format = {
   width: 600,
   height: 600,
-  smoothing: false,
+  smoothing: true,
 };
 
 const extraMetadata = {
@@ -50,7 +116,7 @@ const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
 const CONTRACT_NAME = 'PIT PUPPY PALS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_SYMBOL = 'PPP';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x3DAeC34E0C0Fb425A14bc074bBfA080824953834';
 const TREASURY_ADDRESS = '0x3DAeC34E0C0Fb425A14bc074bBfA080824953834';
