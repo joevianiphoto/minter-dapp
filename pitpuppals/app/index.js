@@ -8,6 +8,6 @@ import $ from 'jquery'
  
 
 export function Load_PitPuppyPals_App(div) {   
-    ReactDOM.render(<App name={'ppp'} api_url="http://www.pitpuppypals.com/" />, document.getElementById(div)); 
+    ReactDOM.render(<App name={'ppp'} api_url="https://www.pitpuppies.app/" />, document.getElementById(div)); 
 }
  

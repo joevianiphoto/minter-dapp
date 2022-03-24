@@ -58,11 +58,7 @@ if (GENERIC) {
     console.log(`Catch: ${err}`);
   }
 }
-
-return;
-
-
-
+ 
   
   console.log(`Starting upload of metadata...`);
   const files = fs.readdirSync(readDir);

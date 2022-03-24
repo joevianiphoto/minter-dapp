@@ -16,7 +16,7 @@ const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 3400,    ///Floppy ears randon (3400)
+    growEditionSizeTo: 2450,    ///Floppy ears randon (3400)
     layersOrder: [
       { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
@@ -35,7 +35,7 @@ const layerConfigurations = [
     ],
   } ,
   {
-    growEditionSizeTo: 6800,    ///Pointed ears randon (3000) 6800
+    growEditionSizeTo: 2450,    ///Pointed ears randon (3000) 6800
     layersOrder: [
       { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
@@ -54,7 +54,7 @@ const layerConfigurations = [
     ], 
   },    
   {
-    growEditionSizeTo: 6900,    ///Floppy brindle ears randon (100) 6900
+    growEditionSizeTo: 4900,    ///Floppy brindle ears randon (100) 6900
     layersOrder: [ 
       { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
@@ -73,7 +73,7 @@ const layerConfigurations = [
     ], 
   }, 
   {
-    growEditionSizeTo:  7000,    ///Pointed brindle randon (100) 7000
+    growEditionSizeTo:  5000,    ///Pointed brindle randon (100) 7000
     layersOrder: [
       { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
@@ -104,7 +104,7 @@ const format = {
 };
 
 const extraMetadata = {
-  external_url: "http://www.pitpuppypals.com", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://www.pitpuppies.app", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -128,18 +128,18 @@ const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a singl
 const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 500; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x3DAeC34E0C0Fb425A14bc074bBfA080824953834"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
-const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
+const PRESALE_WHITELISTED_ADDRESSES = ['0x3DAeC34E0C0Fb425A14bc074bBfA080824953834']; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "Which puppy will go home with you today?"; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafkreier6knmhnlelxnjbv5vgelh6vtvxmribikpzp25kcz3dq6i4q2bk4"; // Replace with your generic image that will display for all NFTs pre-reveal.
@@ -161,7 +161,7 @@ try {
 const solanaMetadata = {
   symbol: "JV",
   seller_fee_basis_points: 250, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "http://www.pitpuppypals.com",
+  external_url: "https://www.pitpuppies.app",
   creators: [
     {
       address: "0x3DAeC34E0C0Fb425A14bc074bBfA080824953834",
