@@ -17,6 +17,53 @@ let readDir = `${basePath}/build/json`;
 let writeDir = `${basePath}/build/ipfsMetas`;
 
 async function main() {
+
+// Upload Generic Metadata if GENERIC is true
+if (GENERIC) {
+  console.log(`Starting upload of generic metadata...`);
+  if (!fs.existsSync(path.join(`${basePath}/build`, "/ipfsMetasGeneric"))) {
+    fs.mkdirSync(path.join(`${basePath}/build`, "ipfsMetasGeneric"));
+  }
+  readDir = `${basePath}/build/genericJson`;
+  writeDir = `${basePath}/build/ipfsMetasGeneric`;
+
+  let jsonFile = fs.readFileSync(`${readDir}/_metadata.json`);
+  let metaData = JSON.parse(jsonFile);
+  const uploadedMeta = `${writeDir}/_ipfsMetasResponse.json`;
+
+  const genericObject = {
+    "name": metaData.name,
+    "description": metaData.description,
+    "file_url": metaData.image,
+    "external_url": metaData?.external_url,
+    "custom_fields": {
+      "date": metaData.date,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified"
+    }
+  }
+
+  try {
+    const url = "https://api.nftport.xyz/v0/metadata";
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(genericObject),
+    };
+    const response = await fetchWithRetry(url, options);
+    fs.writeFileSync(uploadedMeta, JSON.stringify(response, null, 2));
+    console.log(`Generic metadata uploaded!`);
+  } catch (err) {
+    console.log(`Catch: ${err}`);
+  }
+}
+
+return;
+
+
+
+  
   console.log(`Starting upload of metadata...`);
   const files = fs.readdirSync(readDir);
   files.sort(function (a, b) {
@@ -48,46 +95,7 @@ async function main() {
     console.log(`Catch: ${err}`);
   }
 
-  // Upload Generic Metadata if GENERIC is true
-  if (GENERIC) {
-    console.log(`Starting upload of generic metadata...`);
-    if (!fs.existsSync(path.join(`${basePath}/build`, "/ipfsMetasGeneric"))) {
-      fs.mkdirSync(path.join(`${basePath}/build`, "ipfsMetasGeneric"));
-    }
-    readDir = `${basePath}/build/genericJson`;
-    writeDir = `${basePath}/build/ipfsMetasGeneric`;
-
-    let jsonFile = fs.readFileSync(`${readDir}/_metadata.json`);
-    let metaData = JSON.parse(jsonFile);
-    const uploadedMeta = `${writeDir}/_ipfsMetasResponse.json`;
-
-    const genericObject = {
-      "name": metaData.name,
-      "description": metaData.description,
-      "file_url": metaData.image,
-      "external_url": metaData?.external_url,
-      "custom_fields": {
-        "date": metaData.date,
-        "compiler": "HashLips Art Engine - codeSTACKr Modified"
-      }
-    }
-
-    try {
-      const url = "https://api.nftport.xyz/v0/metadata";
-      const options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(genericObject),
-      };
-      const response = await fetchWithRetry(url, options);
-      fs.writeFileSync(uploadedMeta, JSON.stringify(response, null, 2));
-      console.log(`Generic metadata uploaded!`);
-    } catch (err) {
-      console.log(`Catch: ${err}`);
-    }
-  }
+  
 }
 
 main();

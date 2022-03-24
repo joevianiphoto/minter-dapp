@@ -7,8 +7,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Pit Puppy Pals";
-const description = "Pit Puppy Pals, is a collection of 7000 computer generated, adorable NFT puppies. The main focus of this collection is to bring awareness to one of the most misunderstood breeds of dog.";
+const namePrefix = "Pit Puppies";
+const description = "Pit Puppies, is a collection of 5,000 computer generated, adorable NFT pitbull puppies. The main focus of this collection is to bring awareness to one of the most misunderstood breeds of dog.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
@@ -104,7 +104,7 @@ const format = {
 };
 
 const extraMetadata = {
-  external_url: "https://www.pitpuppypals.com", // Replace with your website or remove this line if you do not have one.
+  external_url: "http://www.pitpuppypals.com", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -115,7 +115,7 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'PIT PUPPY PALS';
+const CONTRACT_NAME = 'Pit Puppies';
 const CONTRACT_SYMBOL = 'PPP';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x3DAeC34E0C0Fb425A14bc074bBfA080824953834';
@@ -139,10 +139,10 @@ const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = "Which puppy will go home with you today?"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafkreier6knmhnlelxnjbv5vgelh6vtvxmribikpzp25kcz3dq6i4q2bk4"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
@@ -161,7 +161,7 @@ try {
 const solanaMetadata = {
   symbol: "JV",
   seller_fee_basis_points: 250, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.pitpuppypals.com",
+  external_url: "http://www.pitpuppypals.com",
   creators: [
     {
       address: "0x3DAeC34E0C0Fb425A14bc074bBfA080824953834",
