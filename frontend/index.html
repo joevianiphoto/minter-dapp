@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
+  <head>
     <title>CodeCats</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,43 +28,14 @@
     <link rel="stylesheet" href="css/three-dots.min.css" />
     <link rel="stylesheet" href="css/splide.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <link href="css/foundation.css" rel="stylesheet" />
-    <link href="css/foundation.mvc.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.11.0.js"></script>
-    <script type="text/javascript" src="js/foundation6.min.js"></script>   
-    <script type="text/javascript" src="js/PPP_bundle.js"></script>
-    <style>
-      .container {
-             position: relative;
-             width: 400px;
-         }
-
-         .layers { 
-             position: absolute;
-             top: 0;
-             left: 0; 
-         }
-
-         .contain_2{ 
-          display: block;
-          flex-direction: initial !important;
-          position: relative !important;
-          margin: 0 auto !important;
-          padding: 1rem 2rem! important;
-          justify-content: center !important;
-          overflow: visible !important;
-         }
- </style>  
   </head>
   <body>
     <header>
-      <div class="contain">
+      <div class="container">
         <div class="logo">
           <a href="/">
             <img src="images/x-icon/favicon-32x32.png" alt="logo" />
-          </a> 
+          </a>
         </div>
         <div class="menu">
           <a
@@ -95,156 +66,145 @@
       </div>
     </header>
 
-    <div class="row">
-      <div class="large-3 columns">
-        <div class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <img src="images/slider/0.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/1.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/2.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/3.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/4.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/5.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/6.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/7.png" />
-              </li>
-              <li class="splide__slide">
-                <img src="images/slider/8.png" />
-              </li>
-            </ul>
-          </div>
-        </div> 
+    <section class="container not-connected">
+      <div>
+        <h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
+        <h1 id="welcomeH1">Welcome to the CodeCats NFT Project!</h1>
+        <p id="welcomeP">
+          The CodeCats NFT Project is a decentralized, open-source project that aims to demonstrate how to develope and launch your own NFT Collection. Follow step by step on the <a href="https://youtube.com/codestackr"  target="_blank" rel="noopener noreferrer">codeSTACKr</a> YouTube channel.
+        </p>
       </div>
-        <div class="large-9 columns">
-          <section class="contain not-connected">
-            <div>
-              <h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
-              <h1 id="welcomeH1">Welcome to the CodeCats NFT Project!</h1>
-              <p id="welcomeP">
-                The CodeCats NFT Project is a decentralized, open-source project that aims to demonstrate how to develope and launch your own NFT Collection. Follow step by step on the <a href="https://youtube.com/codestackr"  target="_blank" rel="noopener noreferrer">codeSTACKr</a> YouTube channel.
-              </p>
-            </div>
-          </section>
-      
-          <section class="contain">
-            <div class="countdown card">
-              <div id="countdown">
-                <ul class="count-down" data-date="">
-                  <li class="clock-item">
-                    <span class="count-number days">20</span>
-                    <p class="count-text">Days</p>
-                  </li>
-      
-                  <li class="clock-item">
-                    <span class="count-number hours">20</span>
-                    <p class="count-text">Hour</p>
-                  </li>
-      
-                  <li class="clock-item">
-                    <span class="count-number minutes">20</span>
-                    <p class="count-text">Min</p>
-                  </li>
-      
-                  <li class="clock-item">
-                    <span class="count-number seconds">20</span>
-                    <p class="count-text">Sec</p>
-                  </li>
-                </ul>
-                <h2 id="subHeading">Pre-Sale Countdown</h2>
-              </div>
-              <h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
-              <p id="mainText">
-                A new batch of cute cats will be available very soon!
-              </p>
-              <a
-                id="actionButton"
-                href="https://discord.gg/A9CnsVzzkZ"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hero-btn btn"
-                ><span>Join the Catmmunity</span>
-              </a>
-              <div id="mintcontain" class="mint-contain hidden">
-                <div class="info-contain">
-                  <div>
-                    <h3>Supply</h3>
-                    <p id="totalSupply">100</p>
-                  </div>
-                  <div>
-                    <h3>Price Per Mint</h3>
-                    <p id="pricePerMint">1 ETH</p>
-                  </div>
-                  <div>
-                    <h3>Max</h3>
-                    <p id="maxPerMint">5 per wallet</p>
-                  </div>
-                </div>
-                <div class="mint-qty">
-                  <span>
-                    <button class="input-number-decrement btn" id="mintDecrement">–</button>
-                    <input
-                      id="mintInput"
-                      class="input-number btn"
-                      type="number"
-                      value="1"
-                      min="1"
-                      max="5"
-                    />
-                    <button class="input-number-increment btn" id="mintIncrement">+</button>
-                  </span>
-                  <button id="setQtyMax" class="btn">SET MAX</button>
-                </div>
-                <div class="total-price-contain">
-                  <h3>Total</h3>
-                  <p id="totalPrice">.001 ETH</p>
-                </div>
-                <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
-              </div>
-            </div>
-            <div class="minted-contain card show-card hidden">
-              <h1>🎉</h1>
-              <h2>Minted!</h2>
-              <p>Here's your trasaction link:</p>
-              <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
-                <button class="hero-btn btn">View Transaction</button>
-              </a>
-              <p>View it in the collection:</p>
-              <a
-                id="mintedLinkBtn"
-                href="https://testnets.opensea.io/collection/teststackr-collection"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button class="hero-btn btn">View Collection</button>
-              </a>
-            </div>
-          </section>
-      
-          <div id="spinner" class="dot-spin"></div> 
-          
-          <section  class="contain" >
-            <div id="app_div" ></div>  
-          </section>
-        </div>
-    </div>
+    </section>
 
-   
+    <section class="container">
+      <div class="countdown card">
+        <div id="countdown">
+          <ul class="count-down" data-date="">
+            <li class="clock-item">
+              <span class="count-number days">20</span>
+              <p class="count-text">Days</p>
+            </li>
+
+            <li class="clock-item">
+              <span class="count-number hours">20</span>
+              <p class="count-text">Hour</p>
+            </li>
+
+            <li class="clock-item">
+              <span class="count-number minutes">20</span>
+              <p class="count-text">Min</p>
+            </li>
+
+            <li class="clock-item">
+              <span class="count-number seconds">20</span>
+              <p class="count-text">Sec</p>
+            </li>
+          </ul>
+          <h2 id="subHeading">Pre-Sale Countdown</h2>
+        </div>
+        <h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
+        <p id="mainText">
+          A new batch of cute cats will be available very soon!
+        </p>
+        <a
+          id="actionButton"
+          href="https://discord.gg/A9CnsVzzkZ"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-btn btn"
+          ><span>Join the Catmmunity</span>
+        </a>
+        <div id="mintContainer" class="mint-container hidden">
+          <div class="info-container">
+            <div>
+              <h3>Supply</h3>
+              <p id="totalSupply">100</p>
+            </div>
+            <div>
+              <h3>Price Per Mint</h3>
+              <p id="pricePerMint">1 ETH</p>
+            </div>
+            <div>
+              <h3>Max</h3>
+              <p id="maxPerMint">5 per wallet</p>
+            </div>
+          </div>
+          <div class="mint-qty">
+            <span>
+              <button class="input-number-decrement btn" id="mintDecrement">–</button>
+              <input
+                id="mintInput"
+                class="input-number btn"
+                type="number"
+                value="1"
+                min="1"
+                max="5"
+              />
+              <button class="input-number-increment btn" id="mintIncrement">+</button>
+            </span>
+            <button id="setQtyMax" class="btn">SET MAX</button>
+          </div>
+          <div class="total-price-container">
+            <h3>Total</h3>
+            <p id="totalPrice">.001 ETH</p>
+          </div>
+          <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
+        </div>
+      </div>
+      <div class="minted-container card show-card hidden">
+        <h1>🎉</h1>
+        <h2>Minted!</h2>
+        <p>Here's your trasaction link:</p>
+        <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
+          <button class="hero-btn btn">View Transaction</button>
+        </a>
+        <p>View it in the collection:</p>
+        <a
+          id="mintedLinkBtn"
+          href="https://testnets.opensea.io/collection/teststackr-collection"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="hero-btn btn">View Collection</button>
+        </a>
+      </div>
+    </section>
+
+    <div id="spinner" class="dot-spin"></div>
+
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="images/slider/0.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/1.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/2.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/3.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/4.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/5.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/6.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/7.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="images/slider/8.png" />
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <script src="js/metamask-onboarding.bundle.js"></script>
     <script src="js/web3.min.js"></script>
@@ -252,11 +212,5 @@
     <script src="js/constants.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/app.js"></script>
-
-    <!-- <script> 
-      $( document ).ready(function() {
-        pitpuppals.Load_PitPuppyPals_App('app_div'); 
-      }); 
-    </script> -->
   </body>
 </html>
