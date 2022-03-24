@@ -1,28 +1,21 @@
 /* FONTS */
-
-@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+ 
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Ribeye+Marrow&display=swap');
 /* GLOBAL STYLES */
 
 :root {
-  --font-primary: "Poppins", sans-serif;
-  --font-secondary: "Arvo", serif;
-  --font-code: "Roboto", monospace;
-  --bg-color: #00163f;
-  --bg-color-transparent: #00163f80;
-  --font-color: #ffffff;
-  --btn-bg-color: #ffffff;
-  --accent-color: #be7efe;
+  --font-primary: "Ribeye Marrow", sans-serif;
+  --font-secondary: "Dongle", serif; 
+  --bg-color: #e9ccf7;
+  --bg-color-transparent: #3572e280;
+  --font-color: #302f2f;
+  --btn-bg-color: #8b4bb1;
+  --accent-color: #e0caf7;
   --header-shadow: var(--accent-color) 0px 0px 5px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
+ 
 body {
   background-color: var(--bg-color);
   display: flex;
@@ -31,34 +24,41 @@ body {
   color: var(--font-color);
   font-family: var(--font-primary);
 }
+ 
 
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  justify-content: center;
-  overflow: hidden;
+h1{
+  font-size: 3em;
+  color: rgb(121, 21, 146) !important;
 }
 
+.maindiv{
+  font-family: var(--font-secondary);
+  font-size: 2em; 
+  width: 80%;
+  margin:0 auto;
+}
 /* HEADER */
 
-header {
-  background-color: var(--bg-color);
-  box-shadow: var(--header-shadow);
+a{
+  text-decoration:   none!important;
+  font-size: 3em!important;
+}
+ 
+.menu {  
+  align-items: center;
+  font-size: 24px !important; 
+  background: var(--btn-bg-color);
+  border-radius: 6pt;
+  padding: 4px 12px 4px 12px;
+  color:white;
+  margin: auto 0;
 }
 
-header .container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.menu {
-  display: flex;
-  gap: 2rem;
+.menuimage {  
   align-items: center;
+  font-size: 1em!important;
+  margin-left: 2em;
 }
 
 /* NOT CONNECTED */
@@ -80,8 +80,7 @@ header .container {
 .not-connected h1 {
   text-shadow: 2px 2px 0 var(--accent-color);
   font-style: italic;
-  margin: 2rem 0;
-  font-size: 3.5rem;
+  margin: 2rem 0; 
 }
 
 .not-connected p {
@@ -92,8 +91,7 @@ header .container {
 
 .not-connected a {
   text-decoration: none;
-  color: var(--accent-color);
-  font-size: 1.5rem;
+  color: var(--accent-color); 
   font-weight: bold;
 }
 
@@ -106,8 +104,7 @@ header .container {
   color: var(--accent-color);
   font-family: var(--font-secondary);
   font-style: italic;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: bold; 
   text-align: center;
   text-transform: capitalize;
   transition: all 0.3s ease;
@@ -131,8 +128,7 @@ header .container {
 }
 
 .hero-btn {
-  border-radius: 4px;
-  font-size: 1.2rem;
+  border-radius: 4px; 
   padding: 1.5rem 3rem;
 }
 
@@ -185,8 +181,7 @@ section {
 }
 .countdown .clock-item .count-number {
   background: var(--accent-color);
-  color: var(--font-color);
-  font-size: 2rem;
+  color: var(--font-color); 
   font-weight: 700;
   font-family: var(--font-secondary);
   padding: 1rem;
@@ -198,8 +193,7 @@ section {
 }
 .countdown .clock-item .count-text {
   background: var(--btn-bg-color);
-  font-family: var(--font-secondary);
-  font-size: 1.1rem;
+  font-family: var(--font-secondary); 
   color: var(--bg-color);
   padding: 0.5rem 0.7rem;
   display: inline-block;
@@ -212,8 +206,7 @@ section {
 .countdown h1 {
   text-shadow: 2px 2px 0 var(--accent-color);
   font-style: italic;
-  margin: 2rem 0;
-  font-size: 3.5rem;
+  margin: 2rem 0; 
   text-align: center;
 }
 
@@ -221,8 +214,7 @@ section {
   margin-top: 1rem;
 }
 
-.countdown > p {
-  font-size: 1.1rem;
+.countdown > p { 
   font-family: var(--font-secondary);
   margin-bottom: 2rem;
   text-align: center;
@@ -300,13 +292,11 @@ section {
   width: 100%;
 }
 
-.minted-container h1 {
-  font-size: 5rem;
+.minted-container h1 { 
   margin-bottom: 2rem;
 }
 
-.minted-container h2 {
-  font-size: 2rem;
+.minted-container h2 { 
   margin-bottom: 1rem;
 }
 
