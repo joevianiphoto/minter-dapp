@@ -18,7 +18,7 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 2450,    ///Floppy ears randon (3400)
     layersOrder: [
-      { name: "Background" },
+      //{ name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
       { name: "Body" , displayName : "Body Color" },
       { name: "Accent Fur" },
@@ -31,14 +31,15 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"}  ,
-      { name: "Frame"  , displayName : ""}    
+      //{ name: "Frame"  , displayName : ""}    
     ],
   } ,
   {
     growEditionSizeTo: 2450,    ///Pointed ears randon (3000) 6800
     layersOrder: [
-      { name: "Background" },
+      //{ name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
+
       { name: "BodyPointEars" , displayName : "Body Color" },
       { name: "Accent Fur" },
       { name: "Highlights"  , displayName : ""}, 
@@ -50,13 +51,13 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"}  ,
-      { name: "Frame"  , displayName : ""}     
+      //{ name: "Frame"  , displayName : ""}     
     ], 
   },    
   {
     growEditionSizeTo: 4900,    ///Floppy brindle ears randon (100) 6900
     layersOrder: [ 
-      { name: "Background" },
+      //{ name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
       { name: "BodyBrindle" , displayName : "Body Color" },
       { name: "Accent Fur" },
@@ -69,13 +70,13 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"} ,
-      { name: "Frame"  , displayName : ""}      
+      //{ name: "Frame"  , displayName : ""}      
     ], 
   }, 
   {
     growEditionSizeTo:  5000,    ///Pointed brindle randon (100) 7000
     layersOrder: [
-      { name: "Background" },
+      //{ name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
       { name: "BodyBrindlePoint" , displayName : "Body Color" },
       { name: "Accent Fur" },
@@ -88,7 +89,7 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"}  ,
-      { name: "Frame"  , displayName : ""}    
+      //{ name: "Frame"  , displayName : ""}    
     ], 
   } 
 ];
@@ -98,8 +99,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 600,
-  height: 600,
+  width: 400,
+  height: 400,
   smoothing: true,
 };
 
@@ -195,7 +196,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
