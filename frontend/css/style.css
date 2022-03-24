@@ -32,7 +32,10 @@ body {
   font-family: var(--font-primary);
 }
 
-.contain {  
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
   margin: 0 auto;
   padding: 1rem 2rem;
   justify-content: center;
@@ -46,7 +49,7 @@ header {
   box-shadow: var(--header-shadow);
 }
 
-header .contain {
+header .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +65,8 @@ header .contain {
 .not-connected {
   align-items: center;
   height: 100%;
-  text-align: center; 
+  text-align: center;
+  margin: 0 auto 0 35vw;
   opacity: 0;
   transform: translateY(10vh);
   transition: all 0.5s ease-in-out;
@@ -224,16 +228,16 @@ section {
   text-align: center;
 }
 
-/* MINT contain */
+/* MINT CONTAINER */
 
-.mint-contain {
+.mint-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.info-contain {
+.info-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -275,20 +279,20 @@ section {
   user-select: none;
 }
 
-.total-price-contain {
+.total-price-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 1rem 0 2rem;
 }
 
-.total-price-contain p {
+.total-price-container p {
   color: var(--accent-color);
 }
 
-/* MINTED contain */
+/* MINTED CONTAINER */
 
-.minted-contain {
+.minted-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -296,17 +300,17 @@ section {
   width: 100%;
 }
 
-.minted-contain h1 {
+.minted-container h1 {
   font-size: 5rem;
   margin-bottom: 2rem;
 }
 
-.minted-contain h2 {
+.minted-container h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.minted-contain p {
+.minted-container p {
   margin: 1rem 0;
 }
 
