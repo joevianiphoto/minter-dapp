@@ -31,34 +31,24 @@
   </head>
   <body>
       <!--HEADER-->
-      <div class="maindiv">  
-          <a href="/" class="menuimage">
-            <img src="images/x-icon/favicon-32x32.png" alt="logo" />
-          </a>  
-
-          <a
-            href="https://opensea.io/collection/codecats"
-            target="_blank"
-            rel="noopener noreferrer" class="menuimage"
-          ><img src="images/header/opensea.webp" alt="Opensea" /></a>
-
-          <a href="#story"  class="menu">Story</a>
-          <a href="#map"  class="menu">Road Map</a> 
-
+      <div class="maindiv"> 
+        <img src="images/Banner.png" style="width: 100%"/> <br/> 
+          <a href="https://opensea.io/collection/codecats" target="_blank" class="menu" style="float: left;margin-top: 7px;margin-right:7px">Opensea</a>
+           <a href="#map"  class="menu" style="float: left;margin-top: 7px;margin-right:7px">Road Map</a> 
+          <a href="#story"  class="menu" style="float: left;margin-top: 7px;margin-right:7px">Story</a> 
           <a class="menu" id="connectWallet" style="float: right;margin-top: 7px;">
             Connect Wallet  
-          </a> 
+          </a>  
+        <br/> 
       </div> 
 
       <!--MINT-->
-      <div class="minted-container card show-card hidden maindiv">
-        <h1>🎉</h1>
+      <div class="minted-container card show-card hidden maindiv"> 
         <h2>Minted!</h2>
         <p>Here's your trasaction link:</p>
         <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer" class="menu">
           View Transaction
-        </a>
-
+        </a>   
         <p>View it in the collection:</p>
         <a
           id="mintedLinkBtn"
@@ -68,12 +58,17 @@
           class="menu"
         >View Collection</a>
       </div>
+
+      <h2 id="welcomeH2" class="not-connected maindiv">Connect to Wallet to Get Started</h2> 
+      
+      <div class="maindiv "> 
+       <h1 id="welcomeH1">Welcome to Pit Puppies NFT Project.!</h1>
+      </div>  
+
+
     
       <!--WELCOME AND STUFF-->
-      <div class="maindiv "> 
-        <h1 id="welcomeH1">Welcome to Pit Puppies NFT Project.!</h1>
-        <h2 id="welcomeH2" class="not-connected">Connect to Wallet to Get Started</h2>
-        
+      <div class="maindiv ">  
           Inspired by true events, the Pit Puppies collection was computer illustrated and randomly compiled into a 5,000 NTF collection living on the Polygon network.  
           <br/>
           <a name="story"></a>
@@ -148,7 +143,7 @@
           </div>
           <h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
           <p id="mainText">
-            A new batch of cute cats will be available very soon!
+            A new batch of puppies will be available very soon!
           </p>
           <a
             id="actionButton"
@@ -194,14 +189,8 @@
             </div>
             <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
           </div>
-        </div>
-
-
-
-
+        </div> 
       </div>
- 
-     
   
 
     <div id="spinner" class="dot-spin"></div>
