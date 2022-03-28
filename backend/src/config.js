@@ -116,7 +116,7 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Pit Puppies';
+const CONTRACT_NAME = 'Pit Puppies test';
 const CONTRACT_SYMBOL = 'PPP';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x3DAeC34E0C0Fb425A14bc074bBfA080824953834';
