@@ -7,7 +7,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Pit Puppies";
+const namePrefix = "Pit Puppy";
 const description = "Pit Puppies, is a collection of 5,000 computer generated, adorable NFT pitbull puppies. The main focus of this collection is to bring awareness to one of the most misunderstood breeds of dog.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
@@ -18,7 +18,7 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 2450,    ///Floppy ears randon (3400)
     layersOrder: [
-      //{ name: "Background" },
+      { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
       { name: "Body" , displayName : "Body Color" },
       { name: "Accent Fur" },
@@ -31,15 +31,15 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"}  ,
-      //{ name: "Frame"  , displayName : ""}    
+      { name: "Frame"  , displayName : ""}    ,
+      { name: "Copy"  , displayName : ""}    
     ],
   } ,
   {
-    growEditionSizeTo: 2450,    ///Pointed ears randon (3000) 6800
+    growEditionSizeTo: 4800,    ///Pointed ears randon (3000) 6800
     layersOrder: [
-      //{ name: "Background" },
+      { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
-
       { name: "BodyPointEars" , displayName : "Body Color" },
       { name: "Accent Fur" },
       { name: "Highlights"  , displayName : ""}, 
@@ -51,13 +51,14 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"}  ,
-      //{ name: "Frame"  , displayName : ""}     
+      { name: "Frame"  , displayName : ""}  ,
+      { name: "Copy"  , displayName : ""}       
     ], 
   },    
   {
     growEditionSizeTo: 4900,    ///Floppy brindle ears randon (100) 6900
     layersOrder: [ 
-      //{ name: "Background" },
+      { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
       { name: "BodyBrindle" , displayName : "Body Color" },
       { name: "Accent Fur" },
@@ -70,13 +71,14 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"} ,
-      //{ name: "Frame"  , displayName : ""}      
+      { name: "Frame"  , displayName : ""}  ,
+      { name: "Copy"  , displayName : ""}        
     ], 
   }, 
   {
-    growEditionSizeTo:  5000,    ///Pointed brindle randon (100) 7000
+    growEditionSizeTo:  5003,    ///Pointed brindle randon (100) 7000
     layersOrder: [
-      //{ name: "Background" },
+      { name: "Background" },
       { name: "Mat" , displayName : "Floor Mat"},  
       { name: "BodyBrindlePoint" , displayName : "Body Color" },
       { name: "Accent Fur" },
@@ -89,7 +91,8 @@ const layerConfigurations = [
       { name: "Mouth" }, 
       { name: "Toys"  , displayName : "Toy Right"},  
       { name: "Toys2"  , displayName : "Toy Left"}  ,
-      //{ name: "Frame"  , displayName : ""}    
+      { name: "Frame"  , displayName : ""}   ,
+      { name: "Copy"  , displayName : ""}     
     ], 
   } 
 ];
@@ -99,13 +102,17 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 400,
-  height: 400,
+  width: 500,
+  height: 500,
   smoothing: true,
 };
 
 const extraMetadata = {
-  external_url: "https://www.pitpuppies.app", // Replace with your website or remove this line if you do not have one.
+  token: "",
+	wallet_id: "",
+	id: 0 ,
+  external_url: "https://www.pitpuppies.app",  
+  compiler: "HashLips, codeSTACKr, JVP Modified"
 };
 
 // NFTPort Info
